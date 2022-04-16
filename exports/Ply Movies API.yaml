@@ -1,0 +1,749 @@
+_type: export
+__export_format: 4
+__export_date: 2022-04-16T21:13:13.437Z
+__export_source: insomnia.desktop.app:v2022.1.0
+resources:
+  - _id: req_wrk_d090293fd72b493c876c7b4c98f1d4706c545a38
+    parentId: wrk_d090293fd72b493c876c7b4c98f1d470
+    modified: 1650142777376
+    created: 1650134829799
+    url: "{{baseUrl}}/movies"
+    name: List movies
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - name: title
+        disabled: false
+        value: "{{title}}"
+        id: pair_f00e80202a324d3d903bd54008650e59
+        type: text
+        multiline: false
+      - name: year
+        disabled: true
+        value: "0"
+        id: pair_d32c9f87e7964d12b54348e286f6e47f
+      - name: rating
+        disabled: true
+        value: "0"
+        id: pair_9a496e282fc748f4be4852fc5737cf5a
+      - name: search
+        disabled: true
+        value: string
+        id: pair_6e76b48ac3624321be4c449b99f10dbc
+      - name: sort
+        disabled: true
+        value: string
+        id: pair_b43f1455882b4e0394b47c240cf8f315
+      - name: descending
+        disabled: true
+        value: "true"
+        id: pair_24255bb2887e497e8a42809f8c7acf7c
+      - name: start
+        disabled: true
+        value: "0"
+        id: pair_d11042174b5e4d1a9cf32dbabe7ebb43
+      - name: max
+        disabled: true
+        value: "0"
+        id: pair_2029d6cbddf94d278082c96f976eb187
+    headers: []
+    authentication: {}
+    metaSortKey: -1650134829799
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_d090293fd72b493c876c7b4c98f1d470
+    parentId: null
+    modified: 1650133974844
+    created: 1650133974844
+    name: ply-movies-spec.yaml
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_wrk_d090293fd72b493c876c7b4c98f1d4708e0750b0
+    parentId: wrk_d090293fd72b493c876c7b4c98f1d470
+    modified: 1650139358027
+    created: 1650134829798
+    url: "{{baseUrl}}/movies/{% response 'body',
+      'req_wrk_d090293fd72b493c876c7b4c98f1d4706c545a38',
+      'b64::JC5tb3ZpZXNbMF0uaWQ=::46b', 'never', 60 %}"
+    name: Retrieve a movie
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1650134829798
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_d090293fd72b493c876c7b4c98f1d47045503a66
+    parentId: wrk_d090293fd72b493c876c7b4c98f1d470
+    modified: 1650138689809
+    created: 1650134829799
+    url: "{{ base_url }}/movies"
+    name: Create a new movie
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "title": "string",
+          "year": 0,
+          "rating": 0,
+          "credits": [
+            {
+              "name": "string",
+              "role": "string"
+            }
+          ],
+          "description": null,
+          "poster": "string",
+          "webRef": {
+            "site": "string",
+            "ref": "string"
+          }
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_5c88722046fa472d8fc348bac58d77db
+    authentication: {}
+    metaSortKey: -1650134829797.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_d090293fd72b493c876c7b4c98f1d47023278b5a
+    parentId: wrk_d090293fd72b493c876c7b4c98f1d470
+    modified: 1650134829797
+    created: 1650134829797
+    url: "{{ base_url }}/movies/{{ movieId }}"
+    name: Replace a movie
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "title": "string",
+          "year": 0,
+          "rating": 0,
+          "credits": [
+            {
+              "name": "string",
+              "role": "string"
+            }
+          ],
+          "description": null,
+          "poster": "string",
+          "webRef": {
+            "site": "string",
+            "ref": "string"
+          }
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1650134829797
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_d090293fd72b493c876c7b4c98f1d47010bcd3cc
+    parentId: wrk_d090293fd72b493c876c7b4c98f1d470
+    modified: 1650134829796
+    created: 1650134829796
+    url: "{{ base_url }}/movies/{{ movieId }}"
+    name: Update a movie
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: "{}"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1650134829796
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_d090293fd72b493c876c7b4c98f1d4708163ba04
+    parentId: wrk_d090293fd72b493c876c7b4c98f1d470
+    modified: 1650134829795
+    created: 1650134829795
+    url: "{{ base_url }}/movies/{{ movieId }}"
+    name: Delete a movie
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1650134829795
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_0e7f1e013d10dc99554d2d1838d30d80fe2a87dc
+    parentId: wrk_d090293fd72b493c876c7b4c98f1d470
+    modified: 1650133974846
+    created: 1650133974846
+    name: Base Environment
+    data:
+      base_url: "{{ scheme }}://{{ host }}{{ base_path }}"
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1650133974846
+    _type: environment
+  - _id: jar_0e7f1e013d10dc99554d2d1838d30d80fe2a87dc
+    parentId: wrk_d090293fd72b493c876c7b4c98f1d470
+    modified: 1650133974848
+    created: 1650133974848
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_92a5728d70384e549a5e912040b1d88e
+    parentId: wrk_d090293fd72b493c876c7b4c98f1d470
+    modified: 1650140874490
+    created: 1650133974845
+    fileName: Ply Movies API
+    contents: |
+      openapi: 3.0.2
+      info:
+        title: Ply Movies API
+        license:
+          name: MIT License
+          url: https://github.com/ply-ct/ply-movies/blob/main/LICENSE
+        version: 1.1.1
+        x-logo:
+          url: https://ply-ct.org/ply/img/ply.svg
+          altText: Ply
+      externalDocs:
+        description: Find out more about Ply
+        url: https://ply-ct.org
+      servers:
+        - url: https://ply-ct.org
+          description: ply-ct.org
+        - url: http://localhost:3000
+          description: localhost
+      tags:
+        - name: Ply Movies
+          description: Horror movies from the 1930s
+          externalDocs:
+            description: Ply Example API
+            url: https://ply-ct.org
+      paths:
+        /movies:
+          get:
+            summary: List movies
+            tags:
+              - Movies
+            parameters:
+              - name: title
+                in: query
+                description: Movie title
+                schema:
+                  type: string
+              - name: year
+                in: query
+                description: Year of release
+                schema:
+                  type: integer
+                  minimum: 1930
+                  maximum: 1939
+              - name: rating
+                in: query
+                description: Movie rating
+                schema:
+                  type: number
+                  minimum: 0
+                  maximum: 5
+                  multipleOf: 0.5
+              - name: search
+                in: query
+                description: Find pattern
+                schema:
+                  type: string
+              - name: sort
+                in: query
+                description: Sort field
+                schema:
+                  type: string
+              - name: descending
+                in: query
+                description: Sort descending
+                schema:
+                  type: boolean
+              - name: start
+                in: query
+                description: Pagination start index
+                schema:
+                  type: integer
+              - name: max
+                in: query
+                description: Page size
+                schema:
+                  type: integer
+            responses:
+              '200':
+                description: OK
+                content:
+                  application/json:
+                    schema:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/Movie'
+          post:
+            summary: Create a new movie
+            tags:
+              - Movies
+            requestBody:
+              description: Movie
+              required: true
+              content:
+                application/json:
+                  schema:
+                    $ref: '#/components/schemas/Movie'
+            responses:
+              '201':
+                description: Created
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/Movie'
+              '400':
+                description: Invalid movie content
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/StatusResponse'
+              '409':
+                description: Conflict
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/StatusResponse'
+        '/movies/{movieId}':
+          get:
+            summary: Retrieve a movie
+            tags:
+              - Movie
+            parameters:
+              - name: movieId
+                in: path
+                required: true
+                schema:
+                  type: string
+            responses:
+              '200':
+                description: OK
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/Movie'
+              '404':
+                description: Movie not found
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/StatusResponse'
+          put:
+            summary: Replace a movie
+            tags:
+              - Movie
+            parameters:
+              - name: movieId
+                in: path
+                required: true
+                schema:
+                  type: string
+            requestBody:
+              description: Movie
+              required: true
+              content:
+                application/json:
+                  schema:
+                    $ref: '#/components/schemas/Movie'
+            responses:
+              '200':
+                description: OK
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/StatusResponse'
+              '400':
+                description: Invalid movie content
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/StatusResponse'
+              '404':
+                description: Movie not found
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/StatusResponse'
+          patch:
+            summary: Update a movie
+            tags:
+              - Movie
+            parameters:
+              - name: movieId
+                in: path
+                required: true
+                schema:
+                  type: string
+            requestBody:
+              description: Partial movie
+              required: true
+              content:
+                application/json:
+                  schema:
+                    type: object
+            responses:
+              '200':
+                description: OK
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/StatusResponse'
+              '400':
+                description: Invalid movie content
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/StatusResponse'
+              '404':
+                description: Movie not found
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/StatusResponse'
+          delete:
+            summary: Delete a movie
+            tags:
+              - Movie
+            parameters:
+              - name: movieId
+                in: path
+                required: true
+                schema:
+                  type: string
+            responses:
+              '200':
+                description: OK
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/StatusResponse'
+              '404':
+                description: Movie not found
+                content:
+                  application/json:
+                    schema:
+                      $ref: '#/components/schemas/StatusResponse'
+      components:
+        schemas:
+          Credit:
+            additionalProperties: false
+            description: Credited cast member
+            properties:
+              name:
+                description: Cast member's name
+                type: string
+              role:
+                description: Their role in the production
+                type: string 
+                enum:
+                  - actor
+                  - director
+            required:
+              - name
+              - role
+            type: object
+          WebRef:
+            additionalProperties: false
+            description: Web reference with movie details
+            properties:
+              site:
+                description: Movie info site (imdb.com, themoviedb.org)
+                type: string
+              ref:
+                description: The site's reference id for this movie
+                type: string
+            required:
+              - site
+              - ref
+            type: object
+          Movie:
+            additionalProperties: false
+            description: Movie
+            properties:
+              id:
+                description: Unique ID provided by the API
+                type: string
+                readOnly: true
+              title:
+                description: Movie title
+                type: string
+              year:
+                description: Year of release
+                type: integer
+                minimum: 1930
+                maximum: 1939
+              rating:
+                description: Movie rating
+                type: number
+                minimum: 0
+                maximum: 5
+                multipleOf: 0.5
+              credits:
+                description: Credited cast members
+                type: array
+                items:
+                  $ref: '#/components/schemas/Credit'
+              description:
+                description: One-sentence discussion
+              poster:
+                description: Poster image file path
+                type: string
+                maxLength: 2048
+              webRef:
+                $ref: '#/components/schemas/WebRef'
+            required:
+              - id
+              - title
+              - year
+            type: object
+          Status:
+            additionalProperties: false
+            properties:
+              code:
+                $ref: '#/components/schemas/StatusCodes'
+              errors:
+                items:
+                  type: string
+                type: array
+              message:
+                type: string
+            required:
+              - code
+              - message
+            type: object
+          StatusResponse:
+            additionalProperties: false
+            properties:
+              status:
+                $ref: '#/components/schemas/Status'
+            required:
+              - status
+            type: object
+          StatusCodes:
+            enum:
+              - 100
+              - 101
+              - 102
+              - 200
+              - 201
+              - 202
+              - 203
+              - 204
+              - 205
+              - 206
+              - 207
+              - 300
+              - 301
+              - 302
+              - 303
+              - 304
+              - 305
+              - 307
+              - 308
+              - 400
+              - 401
+              - 402
+              - 403
+              - 404
+              - 405
+              - 406
+              - 407
+              - 408
+              - 409
+              - 410
+              - 411
+              - 412
+              - 413
+              - 414
+              - 415
+              - 416
+              - 417
+              - 418
+              - 419
+              - 420
+              - 422
+              - 423
+              - 424
+              - 428
+              - 429
+              - 431
+              - 451
+              - 500
+              - 501
+              - 502
+              - 503
+              - 504
+              - 505
+              - 507
+              - 511
+            type: number
+    contentType: yaml
+    _type: api_spec
+  - _id: uts_995ca46f34664cf3b2ecf8fd4258290f
+    parentId: wrk_d090293fd72b493c876c7b4c98f1d470
+    modified: 1650134839487
+    created: 1650134839487
+    name: ply-movies suite
+    _type: unit_test_suite
+  - _id: env_env_0e7f1e013d10dc99554d2d1838d30d80fe2a87dc_sub
+    parentId: env_0e7f1e013d10dc99554d2d1838d30d80fe2a87dc
+    modified: 1650139209751
+    created: 1650134829801
+    name: OpenAPI env
+    data:
+      scheme: https
+      base_path: ""
+      host: ply-ct.org
+    dataPropertyOrder:
+      "&":
+        - scheme
+        - base_path
+        - host
+    color: null
+    isPrivate: false
+    metaSortKey: 1650134829801
+    _type: environment
+  - _id: env_092adfe1efc344f7a54d0be1755e6f0a
+    parentId: env_0e7f1e013d10dc99554d2d1838d30d80fe2a87dc
+    modified: 1650139261908
+    created: 1650139218290
+    name: ply-ct.org
+    data:
+      baseUrl: http://ply-ct.org
+      title: Dracula
+    dataPropertyOrder:
+      "&":
+        - baseUrl
+        - title
+    color: null
+    isPrivate: false
+    metaSortKey: 1650139218290
+    _type: environment
+  - _id: ut_88ec3111297c46cdbd7e1c254eb7dbf4
+    parentId: uts_995ca46f34664cf3b2ecf8fd4258290f
+    modified: 1650142763010
+    created: 1650134863443
+    requestId: req_wrk_d090293fd72b493c876c7b4c98f1d4706c545a38
+    name: Get Movie by Title
+    code: |-
+      const response = await insomnia.send();
+      expect(response.status).to.equal(200);
+      const movies = JSON.parse(response.data).movies;
+      expect(movies.length).to.be.equal(1);
+      const movie = movies[0];
+      expect(movie.id).to.be.a('string');
+      expect(typeof movie.id).to.be.equal('string');
+      expect(movie.title).to.be.equal('Dracula');
+      expect(movie.year).to.be.equal(1931);
+      expect(movie.rating).to.be.equal(5);
+      const credits = movie.credits;
+      expect(credits.length).to.be.equal(6);
+      expect(credits[0].role).to.be.equal('director');
+      expect(credits[0].name).to.be.equal('Tod Browning');
+      expect(credits[1].role).to.be.equal('actor');
+      expect(credits[1].name).to.be.equal('Bela Lugosi');
+      expect(credits[2].role).to.be.equal('actor');
+      expect(credits[2].name).to.be.equal('Helen Chandler');
+      expect(credits[3].role).to.be.equal('actor');
+      expect(credits[3].name).to.be.equal('David Manners');
+      expect(credits[4].role).to.be.equal('actor');
+      expect(credits[4].name).to.be.equal('Dwight Frye');
+      expect(credits[5].role).to.be.equal('actor');
+      expect(credits[5].name).to.be.equal('Edward Van Sloan');
+      expect(typeof movie.description).to.be.equal('string');
+      expect(movie.poster).to.be.equal('drac.jpg');
+      const webRef = movie.webRef;
+      expect(webRef.site).to.be.equal('imdb.com');
+      expect(webRef.ref).to.be.equal('tt0021814');
+    _type: unit_test
+  - _id: ut_75782d5a132b4d02913c16d17048b8f1
+    parentId: uts_995ca46f34664cf3b2ecf8fd4258290f
+    modified: 1650142805797
+    created: 1650142461979
+    requestId: req_wrk_d090293fd72b493c876c7b4c98f1d4708e0750b0
+    name: Get Movie by ID
+    code: |
+      // TODO way to reference environment variables?
+      const response = await insomnia.send();
+      expect(response.status).to.equal(200);
+      const movie = JSON.parse(response.data);
+      expect(movie.id).to.be.a('string');
+      expect(movie.title).to.be.equal('Dracula');
+      expect(movie.year).to.be.equal(1931);
+      expect(movie.rating).to.be.equal(5);
+      const credits = movie.credits;
+      expect(credits.length).to.be.equal(6);
+      expect(credits[0].role).to.be.equal('director');
+      expect(credits[0].name).to.be.equal('Tod Browning');
+      expect(credits[1].role).to.be.equal('actor');
+      expect(credits[1].name).to.be.equal('Bela Lugosi');
+      expect(credits[2].role).to.be.equal('actor');
+      expect(credits[2].name).to.be.equal('Helen Chandler');
+      expect(credits[3].role).to.be.equal('actor');
+      expect(credits[3].name).to.be.equal('David Manners');
+      expect(credits[4].role).to.be.equal('actor');
+      expect(credits[4].name).to.be.equal('Dwight Frye');
+      expect(credits[5].role).to.be.equal('actor');
+      expect(credits[5].name).to.be.equal('Edward Van Sloan');
+      expect(typeof movie.description).to.be.equal('string');
+      expect(movie.poster).to.be.equal('drac.jpg');
+      const webRef = movie.webRef;
+      expect(webRef.site).to.be.equal('imdb.com');
+      expect(webRef.ref).to.be.equal('tt0021814');
+    _type: unit_test
