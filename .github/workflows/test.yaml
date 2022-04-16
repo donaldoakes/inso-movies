@@ -13,4 +13,5 @@ jobs:
       with:
         inso-version: 2.4.0
     - run: inso lint spec "Ply Movies API"
-    - run: inso run test "Ply Movies API" --testNamePattern "Get Movie by Title" --env "ply-ct.org"
+    - run: inso run test "Ply Movies API" --env "OpenAPI env"
+    # - run: inso run test "Ply Movies API" --testNamePattern "Get Movie by Title" --env "OpenAPI env"
