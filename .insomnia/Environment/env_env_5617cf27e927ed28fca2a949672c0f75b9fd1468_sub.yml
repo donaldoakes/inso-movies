@@ -1,0 +1,14 @@
+_id: env_env_5617cf27e927ed28fca2a949672c0f75b9fd1468_sub
+type: Environment
+parentId: env_5617cf27e927ed28fca2a949672c0f75b9fd1468
+modified: 1650144052263
+created: 1650144052263
+name: OpenAPI env
+data:
+  scheme: https
+  base_path: ""
+  host: ply-ct.org
+dataPropertyOrder: null
+color: null
+isPrivate: false
+metaSortKey: 1650144052263

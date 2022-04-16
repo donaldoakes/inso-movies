@@ -1,0 +1,25 @@
+_id: req_wrk_7e87b23165d54d5385232012adea8b4710bcd3cc
+type: Request
+parentId: wrk_7e87b23165d54d5385232012adea8b47
+modified: 1650144052258
+created: 1650144052258
+url: "{{ base_url }}/movies/{{ movieId }}"
+name: Update a movie
+description: ""
+method: PATCH
+body:
+  mimeType: application/json
+  text: "{}"
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1650144052258
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

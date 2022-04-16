@@ -1,0 +1,21 @@
+_id: req_wrk_7e87b23165d54d5385232012adea8b478163ba04
+type: Request
+parentId: wrk_7e87b23165d54d5385232012adea8b47
+modified: 1650144052257
+created: 1650144052257
+url: "{{ base_url }}/movies/{{ movieId }}"
+name: Delete a movie
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1650144052257
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

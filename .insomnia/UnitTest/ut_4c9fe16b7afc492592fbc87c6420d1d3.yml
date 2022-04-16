@@ -1,0 +1,35 @@
+_id: ut_4c9fe16b7afc492592fbc87c6420d1d3
+type: UnitTest
+parentId: uts_62643488ce2341a4a56b797f7d933d67
+modified: 1650144220507
+created: 1650144121320
+requestId: req_wrk_7e87b23165d54d5385232012adea8b478e0750b0
+name: 2 - Get Movie by ID
+code: |
+  // TODO way to reference environment variables?
+  const response = await insomnia.send();
+  expect(response.status).to.equal(200);
+  const movie = JSON.parse(response.data);
+  expect(movie.id).to.be.a('string');
+  expect(movie.title).to.be.equal('Dracula');
+  expect(movie.year).to.be.equal(1931);
+  expect(movie.rating).to.be.equal(5);
+  const credits = movie.credits;
+  expect(credits.length).to.be.equal(6);
+  expect(credits[0].role).to.be.equal('director');
+  expect(credits[0].name).to.be.equal('Tod Browning');
+  expect(credits[1].role).to.be.equal('actor');
+  expect(credits[1].name).to.be.equal('Bela Lugosi');
+  expect(credits[2].role).to.be.equal('actor');
+  expect(credits[2].name).to.be.equal('Helen Chandler');
+  expect(credits[3].role).to.be.equal('actor');
+  expect(credits[3].name).to.be.equal('David Manners');
+  expect(credits[4].role).to.be.equal('actor');
+  expect(credits[4].name).to.be.equal('Dwight Frye');
+  expect(credits[5].role).to.be.equal('actor');
+  expect(credits[5].name).to.be.equal('Edward Van Sloan');
+  expect(typeof movie.description).to.be.equal('string');
+  expect(movie.poster).to.be.equal('drac.jpg');
+  const webRef = movie.webRef;
+  expect(webRef.site).to.be.equal('imdb.com');
+  expect(webRef.ref).to.be.equal('tt0021814');

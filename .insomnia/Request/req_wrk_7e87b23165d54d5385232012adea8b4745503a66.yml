@@ -1,0 +1,42 @@
+_id: req_wrk_7e87b23165d54d5385232012adea8b4745503a66
+type: Request
+parentId: wrk_7e87b23165d54d5385232012adea8b47
+modified: 1650144052261
+created: 1650144052261
+url: "{{ base_url }}/movies"
+name: Create a new movie
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "title": "string",
+      "year": 0,
+      "rating": 0,
+      "credits": [
+        {
+          "name": "string",
+          "role": "string"
+        }
+      ],
+      "description": null,
+      "poster": "string",
+      "webRef": {
+        "site": "string",
+        "ref": "string"
+      }
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1650144052261
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

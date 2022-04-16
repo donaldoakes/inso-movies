@@ -1,0 +1,53 @@
+_id: req_wrk_7e87b23165d54d5385232012adea8b476c545a38
+type: Request
+parentId: wrk_7e87b23165d54d5385232012adea8b47
+modified: 1650144189157
+created: 1650144052261
+url: "{{ base_url }}/movies"
+name: List movies
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: title
+    disabled: false
+    value: Dracula
+    id: pair_ecf7b4f4f80e46eab5b198a4c355ba55
+  - name: year
+    disabled: true
+    value: "0"
+    id: pair_1259a4444425411aa739ae7f635f2118
+  - name: rating
+    disabled: true
+    value: "0"
+    id: pair_e81672d25f014bb3b73d9ff379a1fc18
+  - name: search
+    disabled: true
+    value: string
+    id: pair_aaee6b992bc14c80be6824c810982b98
+  - name: sort
+    disabled: true
+    value: string
+    id: pair_fa0344835e7b4841bb496c02aed75aa4
+  - name: descending
+    disabled: true
+    value: "true"
+    id: pair_a08195443f824792bfdab8e0857928a4
+  - name: start
+    disabled: true
+    value: "0"
+    id: pair_2053e5183c774bdcb93056dd6bc7e466
+  - name: max
+    disabled: true
+    value: "0"
+    id: pair_a124a651fc5e4a789656f8628ac5decb
+headers: []
+authentication: {}
+metaSortKey: -1650144052261
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

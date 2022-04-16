@@ -1,0 +1,23 @@
+_id: req_wrk_7e87b23165d54d5385232012adea8b478e0750b0
+type: Request
+parentId: wrk_7e87b23165d54d5385232012adea8b47
+modified: 1650144346440
+created: 1650144052260
+url: "{{base_url}}/movies/{% response 'body',
+  'req_wrk_d090293fd72b493c876c7b4c98f1d4706c545a38',
+  'b64::JC5tb3ZpZXNbMF0uaWQ=::46b', 'never', 60 %}"
+name: Retrieve a movie
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1650144052260
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
