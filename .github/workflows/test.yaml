@@ -7,11 +7,14 @@ on:
 jobs:
   autotest:
     runs-on: ubuntu-latest
+    env:
+      FORCE_COLOR: 'true'
     steps:
     - uses: actions/checkout@v2
     - uses: kong/setup-inso@v1
       with:
         inso-version: 2.4.0
     - run: inso lint spec "Ply Movies API"
-    - run: inso run test "Ply Movies API" --env "OpenAPI env"
-    # - run: inso run test "Ply Movies API" --testNamePattern "Get Movie by Title" --env "OpenAPI env"
+    # seems previous response is not available
+    # - run: inso run test "Ply Movies API" --env "OpenAPI env"
+    - run: inso run test "Ply Movies API" --testNamePattern "Get Movie by Title" --env "OpenAPI env"
