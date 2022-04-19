@@ -8,6 +8,7 @@
     "url": "git+https://github.com/donaldoakes/inso-movies.git"
   },
   "devDependencies": {
-    "@ply-ct/ply": "^3.0.40"
+    "@ply-ct/ply": "^3.0.40",
+    "typescript": "^4.6.3"
   }
 }
