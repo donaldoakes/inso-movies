@@ -1,0 +1,5 @@
+List Movies:
+  url: ${baseUrl}/movies?title=Frankenstein
+  method: GET
+  headers:
+    Accept: application/json

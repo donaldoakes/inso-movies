@@ -1,0 +1,50 @@
+attributes:
+  NodeStyle: BoxIcon
+  display: x=23,y=18,w=156,h=27
+steps:
+  - id: s1
+    name: Start
+    path: start
+    attributes:
+      display: x=80,y=80,w=60,h=40
+    links:
+      - id: l1
+        to: s2
+        attributes:
+          display: type=Elbow,x=181,y=100,xs=144&216,ys=100&100
+  - id: s2
+    name: |-
+      List Movies
+      by Title
+    path: request
+    links:
+      - id: l2
+        to: s3
+        attributes:
+          display: type=Elbow,x=360,y=100,xs=324&396,ys=100&100
+    attributes:
+      display: x=220,y=60,w=100,h=80
+      url: ${baseUrl}/movies?title=Frankenstein
+      method: GET
+      headers: '[["Accept","application/json"]]'
+  - id: s3
+    name: |-
+      Get Movie
+      by ID
+    path: request
+    links:
+      - id: l3
+        to: s4
+        attributes:
+          display: type=Elbow,x=543,y=100,xs=504&576,ys=100&100
+    attributes:
+      display: x=400,y=60,w=100,h=80
+      url: ${baseUrl}/movies/${@s2.response.body.movies[0].id}
+      method: GET
+      headers: '[["Accept","application/json"]]'
+  - id: s4
+    name: Stop
+    path: stop
+    links: []
+    attributes:
+      display: x=580,y=80,w=60,h=40

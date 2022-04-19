@@ -1,4 +1,4 @@
-name: Autotest using inso
+name: test
 
 on:
   push:
@@ -14,5 +14,9 @@ jobs:
     - uses: kong/setup-inso@v1
       with:
         inso-version: 2.4.0
+    - run: inso generate config "Ply Movies API" > kong-services.yaml
     - run: inso lint spec "Ply Movies API"
     - run: inso run test "Ply Movies API" --env "OpenAPI env"
+    - uses: ply-ct/ply-action@v1.0.4
+      with:
+        plyees: 'ply/**/*.flow'

@@ -1,0 +1,4 @@
+testsLocation: ply
+
+valuesFiles:
+  - ply/values/ply-ct.json

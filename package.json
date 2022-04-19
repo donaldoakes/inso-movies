@@ -1,0 +1,13 @@
+{
+  "name": "inso-movies",
+  "version": "0.0.1",
+  "description": "Insomnia and Ply autotests for ply-movies API",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donaldoakes/inso-movies.git"
+  },
+  "devDependencies": {
+    "@ply-ct/ply": "^3.0.40"
+  }
+}
