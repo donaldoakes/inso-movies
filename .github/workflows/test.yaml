@@ -20,8 +20,8 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '16.x'
-    - run: node --version
     - run: npm install
+    - run: npx ply ply/**/*.flow
     - uses: ply-ct/ply-action@v1.0.4
       with:
-        plyees: 'ply/**/*.flow'
+        result-file: ply/results/actual/ply-results.json

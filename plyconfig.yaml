@@ -2,3 +2,5 @@ testsLocation: ply
 
 valuesFiles:
   - ply/values/ply-ct.json
+
+outputFile: ply/results/actual/ply-results.json
