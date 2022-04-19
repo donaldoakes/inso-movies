@@ -20,6 +20,7 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '16.x'
+    - run: node --version
     - run: npm install
     - uses: ply-ct/ply-action@v1.0.4
       with:
